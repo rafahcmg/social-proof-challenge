@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif; ;
+    font-size: 15px;
+    background-color: var(--white);
+    background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left 1vw, bottom 0vw right 0vw;
+    min-height: 100vh;
+    height: 800px;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 8rem;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col01 {
+    position: relative;
+    flex: 1;
+    max-width: 1024px;
+}
+
+.col02 {
+    position: relative;
+    flex: 1;
+    max-width: auto;
+}
+
+.header {
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.header h1, span {
+    color: var(--very-dark-magenta);
+    font-weight: 600;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.header p {
+    color: var(--dark-grayish-magenta);
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+.content {
+    width: 100%;
+    padding-right: 5rem;
+}
+
+.rating {
+    width: 80%;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.rating .rating-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 0.5rem;
+}
+
+.rating-stars img {
+    width: 0.9rem;
+}
+
+.rating .rating-card span {
+    margin-left: 2rem;
+}
+
+#c1 {
+    position: relative;
+    right: 5rem;
+    top: -1.5rem;
+}
+
+#c2 {
+    position: relative;
+    right: 2.5rem;
+    top: -0.75rem;
+}
+
+.testimonials {
+    max-width: 1024px;
+    width: 100%;
+    gap: 2em;
+}
+
+.testimonials-card {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    background-color: var(--very-dark-magenta);
+    border-radius: 0.5rem;
+    margin: 0 1rem 0 0;
+}
+
+.col02:nth-child(2) {
+    top: 1rem;
+}
+
+.col02:last-child {
+    top: 2rem;
+}
+
+.testimonials-img img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+
+.testimonials .flex {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.testimonials-header h2, h3, p {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.testimonials-header h3 {
+    color: var(--soft-pink);
+    opacity: 0.6;
+    padding-top: 0.3rem;
+}
+
+.testmonials-body {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.testmonials-body p {
+    line-height: 1.2rem;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 800px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        max-height: 548px;
+        background-position: top left -20vw, bottom -10vw right -100vw;
+
+    }
+
+    .container {
+        max-width: 750px;
+    }
+
+    .col01 {
+        position: relative;
+        flex: 100%;
+        max-width: 750px;
+        height: 200px;
+    }
+
+    .header {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .content {
+        padding: 0 2rem;
+    }
+
+    .rating {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #c1, #c2 {
+        right: 0;
+    }
+
+    .testimonials {
+        padding: 0 2rem;
+        max-width: 750px;
+        gap: 0;
+    }
+
+    .col02 {
+        flex: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: none;
+        background-image: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
+        background-position: top 0vw left 1vw, bottom -250vw right 0vw;
+
+    }
+
+    .container {
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 375px;
+        padding-top: 6rem;
+    }
+
+    .col01 {
+        position: relative;
+        flex: 100%;
+        max-width: 375px;
+        height: 300px;
+    }
+
+    .header {
+        margin: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .content h1 {
+        padding: 0 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .content p {
+        font-size: 1.3rem;
+    }
+
+    .rating {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .rating .rating-card {
+        flex-direction: column;
+    }
+
+    .rating-stars {
+        margin-bottom: 0.5rem;
+    }
+
+    #c1, #c2 {
+        right: 0;
+    }
+
+    .testimonials {
+        max-width: 375px;
+        gap: 0;
+    }
+
+    .col02 {
+        flex: 100%;
+    }
+}
